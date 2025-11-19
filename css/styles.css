@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+header {
+    background: #0f0f0f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 100px;
+    text-align: center;
+    background: url('https://via.placeholder.com/1200x400') center/cover;
+    color: white;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.cita-form {
+    margin: 50px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
