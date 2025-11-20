@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Agendar Cita - BarberX</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Agendar Cita — BarberX</title>
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">BarberX</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="citas.html">Agendar Cita</a>
+            </nav>
+            <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+        </div>
+    </header>
 
-<header>
-    <h1>Agendar Cita</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="citas.html">Agendar Cita</a>
-    </nav>
-</header>
+    <main class="container section">
+        <h1>Agendar Cita</h1>
+        <p>Completa el formulario para agendar una cita. Te confirmaremos por WhatsApp.</p>
 
-<section class="cita-form">
-    <h2>Selecciona una fecha</h2>
+        <form id="formCita" class="cita-form">
+            <label>
+                Nombre
+                <input type="text" id="nombre" required placeholder="Tu nombre completo">
+            </label>
 
-    <form id="formCita">
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" required>
-        <button type="submit">Guardar cita</button>
-    </form>
+            <label>
+                Teléfono
+                <input type="tel" id="telefono" required placeholder="3001234567">
+            </label>
 
-    <p id="mensaje"></p>
-</section>
+            <label>
+                Fecha
+                <input type="date" id="fecha" required>
+            </label>
 
-<script src="js/main.js"></script>
+            <label>
+                Hora
+                <input type="time" id="hora" required>
+            </label>
 
+            <label>
+                Servicio
+                <select id="servicio">
+                    <option value="corte">Corte</option>
+                    <option value="afeitado">Afeitado</option>
+                    <option value="barba">Barba</option>
+                    <option value="combo">Combo</option>
+                </select>
+            </label>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Guardar cita</button>
+                <button type="button" id="verCitas" class="btn ghost">Ver citas guardadas</button>
+            </div>
+
+            <p id="mensaje" class="mensaje"></p>
+        </form>
+
+        <section id="listaCitas" class="lista-citas hidden">
+            <h2>Citas guardadas</h2>
+            <ul id="citasUl"></ul>
+            <button id="clearCitas" class="btn ghost">Borrar todas</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© <span id="year3"></span> BarberX</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>document.getElementById('year3').innerText = new Date().getFullYear();</script>
 </body>
 </html>
+
+
 
