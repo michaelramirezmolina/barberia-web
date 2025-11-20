@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Productos - BarberX</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Productos — BarberX</title>
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">BarberX</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="citas.html">Agendar Cita</a>
+            </nav>
+            <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+        </div>
+    </header>
 
-<header>
-    <h1>Productos</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="citas.html">Agendar Cita</a>
-    </nav>
-</header>
+    <main class="container section">
+        <div class="products-header">
+            <h1>Productos</h1>
+            <div class="filters">
+                <select id="filterCategory">
+                    <option value="all">Todos</option>
+                    <option value="cabello">Cabello</option>
+                    <option value="barba">Barba</option>
+                    <option value="piel">Cuidado</option>
+                </select>
+                <input id="searchInput" placeholder="Buscar producto..." />
+            </div>
+        </div>
 
-<section class="productos">
-    <div class="producto">
-        <img src="https://via.placeholder.com/200">
-        <h3>Cera para cabello</h3>
-        <p>$25.000</p>
+        <div id="product-list" class="products-grid"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© <span id="year2"></span> BarberX</div>
+            <div class="socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="WhatsApp">WA</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- reuse modal -->
+    <div id="productModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose2" aria-label="Cerrar">×</button>
+            <div id="modalBody2"></div>
+        </div>
     </div>
 
-    <div class="producto">
-        <img src="https://via.placeholder.com/200">
-        <h3>Aceite para barba</h3>
-        <p>$30.000</p>
-    </div>
-
-    <div class="producto">
-        <img src="https://via.placeholder.com/200">
-        <h3>Shampoo anticaspa</h3>
-        <p>$22.000</p>
-    </div>
-</section>
-
+    <script src="js/main.js"></script>
+    <script>document.getElementById('year2').innerText = new Date().getFullYear();</script>
 </body>
 </html>
+
+
