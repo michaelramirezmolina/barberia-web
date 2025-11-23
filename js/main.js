@@ -8,7 +8,7 @@ const PRODUCTS = [
         title: 'Cera para cabello',
         price: 25000,
         category: 'cabello',
-        img: 'https://i.imgur.com/z3I8x7K.jpeg',
+        img: 'img/cera.jpg',
         desc: 'Textura fuerte, acabado mate. 100ml.'
     },
     {
@@ -16,7 +16,7 @@ const PRODUCTS = [
         title: 'Aceite para barba',
         price: 30000,
         category: 'barba',
-        img: 'https://i.imgur.com/VWft8r6.jpeg',
+        img: 'img/aceite.jpg',
         desc: 'Suaviza, protege y da brillo natural.'
     },
     {
@@ -24,7 +24,7 @@ const PRODUCTS = [
         title: 'Shampoo anticaspa',
         price: 22000,
         category: 'cabello',
-        img: 'https://i.imgur.com/Is4X3kB.jpeg',
+        img: 'img/shampoo.jpg',
         desc: 'Limpieza profunda y control de caspa.'
     },
     {
@@ -32,7 +32,7 @@ const PRODUCTS = [
         title: 'Bálsamo aftershave',
         price: 18000,
         category: 'piel',
-        img: 'https://i.imgur.com/26mTKdX.jpeg',
+        img: 'img/aftershave.jpg',
         desc: 'Calma la piel tras el afeitado.'
     },
     {
@@ -40,7 +40,7 @@ const PRODUCTS = [
         title: 'Peine de madera',
         price: 12000,
         category: 'barba',
-        img: 'https://i.imgur.com/jIbhH0j.jpeg',
+        img: 'img/peine.jpg',
         desc: 'Peine ergonómico, ideal para barbas.'
     },
     {
@@ -48,10 +48,11 @@ const PRODUCTS = [
         title: 'Mascarilla capilar',
         price: 35000,
         category: 'cabello',
-        img: 'https://i.imgur.com/wO8gUuE.jpeg',
+        img: 'img/mascarilla.jpg',
         desc: 'Hidratación profunda y restauración.'
     }
 ];
+
 
 // utilities
 const $ = sel => document.querySelector(sel);
