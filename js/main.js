@@ -52,8 +52,6 @@ const PRODUCTS = [
         desc: 'Hidratación profunda y restauración.'
     }
 ];
-
-
 // utilities
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
